@@ -13,6 +13,7 @@ COPY_QUERY_PATH = 'sql/copy_data.sql'
 REFRESH_RAW=False
 REFRESH_PROCESSED=False
 
+
 # Download dataset
 if not os.path.exists(RAW_PATH) or REFRESH_RAW:
     # Define the URL of the dataset
