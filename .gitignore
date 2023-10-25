@@ -1,0 +1,4 @@
+# Ignore data directory and its contents
+data/
+results/
+spark-warehouse/
