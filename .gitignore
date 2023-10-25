@@ -1,4 +1,6 @@
-# Ignore data directory and its contents
-data/
-results/
+data/raw/online+retail+ii.zip
+data/processed/clean.csv
+results/plots/*.png
+results/tables/*.csv
 spark-warehouse/
+.DS_Store

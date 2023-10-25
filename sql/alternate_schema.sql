@@ -25,3 +25,11 @@ CREATE TABLE IF NOT EXISTS order_details (
   quantity                  NUMERIC(10,2),
   total_price               NUMERIC(10,2)
 );
+
+CREATE INDEX idx_orders_customer_id ON orders(customer_id);
+CREATE INDEX idx_orderdetails_order_id ON order_details(invoice);
+CREATE INDEX idx_orderdetails_product_id ON order_details(stockcode);
+
+ALTER TABLE customers ADD CONSTRAINT unique_customer_id UNIQUE (customer_id);
+ALTER TABLE products ADD CONSTRAINT unique_product_id UNIQUE (stockcode);
+ALTER TABLE order_details ADD CHECK (quantity >= 0);
